@@ -125,5 +125,51 @@ img {
 }
 
 /************************************************
-    SOLUZIONE RESPONSIVE
- ************************************************/
+SOLUZIONE RESPONSIVE
+************************************************/
+
+
+/* TABLET VERSION 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* TABLET VERSION 480px */
+@media screen and (max-width: 480px) {
+    /* Verticalizzo il tutto */
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .why-us .col-left, .why-us .col-right, .steps .col, .row .col {
+        width: 100%;
+    }
+    
+    /* Applico lo sfondo nero */
+    .steps {
+        margin-bottom: 0rem;
+    }
+    .why-us {
+        background-color: #222222;
+        padding-top: 3rem;
+        margin-bottom: 0rem;
+    }
+    
+    /* Do spazio alle varie sezioni */
+    .lessons .col:first-child .card, .why-us .col-left {
+        margin-bottom: 3rem;
+    }    
+    .steps .col:nth-child(2) .card {
+        margin: 3rem 0rem;
+    }
+}
+
+/* BONUS */
+@media (min-width: 768px) and (max-width: 1160px) {
+    .container {
+        max-width: 768px;
+    }
+}
